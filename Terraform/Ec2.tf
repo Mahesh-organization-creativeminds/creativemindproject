@@ -63,10 +63,9 @@ resource "null_resource" "example" {
       "pm2 start npm --name strapi -- run develop",
       "pm2 save"
     ]
-
-  depends_on = [
+}
+ depends_on = [
     aws_instance.ec2forstrapi
   ]
-}
   }
 
