@@ -59,6 +59,7 @@ resource "null_resource" "example" {
       "git checkout mahesh-branch",
       "sudo chown -R ubuntu:ubuntu /srv/strapi",
       "sudo chmod -R 755 /srv/strapi",
+      "cd /srv/strapi",
       "npm install",
       "pm2 start npm --name strapi -- run develop",
       "pm2 save"
