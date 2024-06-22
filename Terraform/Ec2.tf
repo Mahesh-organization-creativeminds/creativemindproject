@@ -55,12 +55,12 @@ resource "null_resource" "example" {
       "sudo apt-get install -y nodejs",
       "sudo npm install -g pm2",
       "cd /srv",
-      "git clone https://github.com/Mahesh-organization-creativeminds/creativemindproject.git",
+      "sudo git clone https://github.com/Mahesh-organization-creativeminds/creativemindproject.git",
       "git checkout mahesh-prod",
       "sudo chown -R ubuntu:ubuntu /srv/creativemindproject",
       "sudo chmod -R 755 /srv/creativemindproject",
       "cd /srv/creativemindproject",
-      "npm install",
+      "sudo npm install",
       "pm2 start npm --name strapi -- run develop",
       "pm2 save"
     ]
