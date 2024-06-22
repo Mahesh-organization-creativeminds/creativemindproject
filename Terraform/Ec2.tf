@@ -41,15 +41,14 @@ resource "aws_instance" "ec2forstrapi" {
 }
 
 resource "null_resource" "example" {
-  provisioner "remote-exec" {
-    connection {
+
+    provisioner "remote-exec" {
+      connection {
       type        = "ssh"
       user        = "ubuntu"
       private_key = file("~/.ssh/id_rsa") 
       host        = aws_instance.ec2forstrapi.public_ip
     }
-
-    provisioner "remote-exec" {
     inline = [
       "sudo apt-get update",
       "curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -",
@@ -71,4 +70,3 @@ resource "null_resource" "example" {
 }
   }
 
-}
