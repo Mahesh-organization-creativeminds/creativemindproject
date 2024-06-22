@@ -56,10 +56,10 @@ resource "null_resource" "example" {
       "sudo npm install -g pm2",
       "cd /srv",
       "sudo git clone https://github.com/Mahesh-organization-creativeminds/creativemindproject.git",
-      "git checkout mahesh-prod",
       "sudo chown -R ubuntu:ubuntu /srv/creativemindproject",
       "sudo chmod -R 755 /srv/creativemindproject",
       "cd /srv/creativemindproject",
+      "git checkout mahesh-prod",
       "sudo npm install",
       "pm2 start npm --name strapi -- run develop",
       "pm2 save"
