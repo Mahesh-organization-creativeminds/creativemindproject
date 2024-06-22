@@ -57,9 +57,9 @@ resource "null_resource" "example" {
       "cd /srv",
       "git clone https://github.com/Mahesh-organization-creativeminds/creativemindproject.git",
       "git checkout mahesh-prod",
-      "sudo chown -R ubuntu:ubuntu /srv/strapi",
-      "sudo chmod -R 755 /srv/strapi",
-      "cd /srv/strapi",
+      "sudo chown -R ubuntu:ubuntu /srv/creativemindproject",
+      "sudo chmod -R 755 /srv/creativemindproject",
+      "cd /srv/creativemindproject",
       "npm install",
       "pm2 start npm --name strapi -- run develop",
       "pm2 save"
